@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Service\Api\WeatherService;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class WeatherController extends Controller
 {
@@ -14,7 +15,7 @@ class WeatherController extends Controller
         $this->weatherService = $weatherService;
     }
 
-    public function showForm()
+    public function showForm(): View
     {
         return view('weather.form');
     }
